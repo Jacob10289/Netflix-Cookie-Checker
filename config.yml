@@ -10,7 +10,7 @@ txt_fields:
   email: true # account email
   plan: true # plan name
   country: true # country code
-  member_since: false # account membership date
+  member_since: true # account membership date
   quality: true # playback quality
   max_streams: true # max concurrent screens
   next_billing: true # next billing date
@@ -34,15 +34,15 @@ notifications:
     plans: "all" # use "all" or multiple like ["premium", "standard_with_ads", "standard", "basic", "mobile", "free"]
 
   telegram:
-    enabled: false # true to send output to Telegram
+    enabled: true # true to send output to Telegram
     bot_token: "" # token from @BotFather
     chat_id: "" # your chat/channel id (example: "-1001234567890")
     mode: "full" # allowed: "full", "cookie", "nftoken"
     plans: "all" # use "all" or multiple like ["premium", "standard_with_ads", "standard", "basic", "mobile", "free"]
 
 display:
-  mode: "simple" # allowed: "log" or "simple"
+  mode: "log" # allowed: "log" or "simple"
 
 retries:
   error_proxy_attempts: 3 # retry attempts on network/proxy errors (rotates proxy each try)
-  nftoken_attempts: 1 # retry attempts for NFToken creation
+  nftoken_attempts: 10 # retry attempts for NFToken creation
