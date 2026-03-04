@@ -28,7 +28,7 @@ nftoken: true # allowed: true or false
 
 notifications:
   webhook:
-    enabled: false # true to send output to Discord webhook
+    enabled: true # true to send output to Discord webhook
     url: "" # put full webhook URL here
     mode: "full" # allowed: "full", "cookie", "nftoken"
     plans: "all" # use "all" or multiple like ["premium", "standard_with_ads", "standard", "basic", "mobile", "free"]
