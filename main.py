@@ -56,11 +56,11 @@ DEFAULT_CONFIG = {
         },
     },
     "display": {
-        "mode": "simple",
+        "mode": "log",
     },
     "retries": {
         "error_proxy_attempts": 3,
-        "nftoken_attempts": 1,
+        "nftoken_attempts": 10,
     },
 }
 
@@ -72,8 +72,8 @@ DEFAULT_YAML_CONFIG = """# Checker By: https://github.com/harshitkamboj
 # true/false fields let users turn output lines ON/OFF in generated txt.
 # Main fields stay ON by default. Advanced fields are listed too, but OFF by default.
 txt_fields:
-  name: false # account holder name
-  email: false # account email
+  name: true # account holder name
+  email: true # account email
   plan: true # plan name
   country: true # country code
   member_since: false # account membership date
@@ -81,37 +81,37 @@ txt_fields:
   max_streams: true # max concurrent screens
   next_billing: true # next billing date
   payment_method: true # payment method type
-  card: false # masked card / bank suffix
-  phone: false # phone number
-  hold_status: false # account hold status
+  card: true # masked card / bank suffix
+  phone: true # phone number
+  hold_status: true # account hold status
   extra_members: true # whether extra members are enabled
-  email_verified: false # email verification status
-  membership_status: false # membership state
+  email_verified: true # email verification status
+  membership_status: true # membership state
   profiles: true # profile names
-  user_guid: false # user GUID extracted from account data
+  user_guid: true # user GUID extracted from account data
 
-nftoken: false # allowed: true or false
+nftoken: true # allowed: true or false
 
 notifications:
   webhook:
-    enabled: false # true to send output to Discord webhook
+    enabled: true # true to send output to Discord webhook
     url: "" # put full webhook URL here
     mode: "full" # allowed: "full", "cookie", "nftoken"
     plans: "all" # use "all" or multiple like ["premium", "standard_with_ads", "standard", "basic", "mobile", "free"]
 
   telegram:
-    enabled: false # true to send output to Telegram
+    enabled: true # true to send output to Telegram
     bot_token: "" # token from @BotFather
     chat_id: "" # your chat/channel id (example: "-1001234567890")
     mode: "full" # allowed: "full", "cookie", "nftoken"
     plans: "all" # use "all" or multiple like ["premium", "standard_with_ads", "standard", "basic", "mobile", "free"]
 
 display:
-  mode: "simple" # allowed: "log" or "simple"
+  mode: "log" # allowed: "log" or "simple"
 
 retries:
   error_proxy_attempts: 3 # retry attempts on network/proxy errors (rotates proxy each try)
-  nftoken_attempts: 1 # retry attempts for NFToken creation
+  nftoken_attempts: 10 # retry attempts for NFToken creation
 """
 
 BANNER = r"""
