@@ -6,35 +6,35 @@
 # true/false fields let users turn output lines ON/OFF in generated txt.
 # Main fields stay ON by default. Advanced fields are listed too, but OFF by default.
 txt_fields:
-  name: true # account holder name
-  email: true # account email
-  plan: true # plan name
-  country: true # country code
-  member_since: true # account membership date
-  quality: true # playback quality
-  max_streams: true # max concurrent screens
-  next_billing: true # next billing date
-  payment_method: true # payment method type
-  card: true # masked card / bank suffix
-  phone: true # phone number
-  hold_status: true # account hold status
-  extra_members: true # whether extra members are enabled
-  email_verified: true # email verification status
-  membership_status: true # membership state
-  profiles: true # profile names
-  user_guid: true # user GUID extracted from account data
+  name: True # account holder name
+  email: True # account email
+  plan: True # plan name
+  country: True # country code
+  member_since: True # account membership date
+  quality: True # playback quality
+  max_streams: True # max concurrent screens
+  next_billing: True # next billing date
+  payment_method: True # payment method type
+  card: True # masked card / bank suffix
+  phone: True # phone number
+  hold_status: True # account hold status
+  extra_members: True # whether extra members are enabled
+  email_verified: True # email verification status
+  membership_status: True # membership state
+  profiles: True # profile names
+  user_guid: True # user GUID extracted from account data
 
-nftoken: true # allowed: true or false
+nftoken: True # allowed: true or false
 
 notifications:
   webhook:
-    enabled: true # true to send output to Discord webhook
+    enabled: True # true to send output to Discord webhook
     url: "" # put full webhook URL here
     mode: "full" # allowed: "full", "cookie", "nftoken"
     plans: "all" # use "all" or multiple like ["premium", "standard_with_ads", "standard", "basic", "mobile", "free"]
 
   telegram:
-    enabled: true # true to send output to Telegram
+    enabled: True # true to send output to Telegram
     bot_token: "" # token from @BotFather
     chat_id: "" # your chat/channel id (example: "-1001234567890")
     mode: "full" # allowed: "full", "cookie", "nftoken"
