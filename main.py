@@ -21,7 +21,7 @@ except ImportError:
 
 DEFAULT_CONFIG = {
     "txt_fields": {
-        "name": True,
+        "name": true,
         "email": true,
         "max_streams": true,
         "plan": true,
@@ -76,7 +76,7 @@ txt_fields:
   email: true # account email
   plan: true # plan name
   country: true # country code
-  member_since: false # account membership date
+  member_since: true # account membership date
   quality: true # playback quality
   max_streams: true # max concurrent screens
   next_billing: true # next billing date
