@@ -21,7 +21,7 @@ except ImportError:
 
 DEFAULT_CONFIG = {
     "txt_fields": {
-        "name": true,
+        "name": True,
         "email": true,
         "max_streams": true,
         "plan": true,
